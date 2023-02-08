@@ -1,0 +1,19 @@
+Package: mcirp
+Title: The Unofficial Package for the MC OIRE
+Version: 0.0.0.9000
+Authors@R: 
+    person("Scott", "Poese", , "scott.poese@montgomerycollege.edu", role = c("aut", "cre"))
+Description: A home for functions that are commonly used by the Montgomery
+    College (MC) Office of Institutional Research and Effectiveness
+    (OIRE). This includes a function for determining retention given a
+    dataframe of students from multiple semesters, and the theme of
+    preference for creating college affiliated plots using 'ggplot2'.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Imports: 
+    dplyr,
+    ggplot2,
+    ggthemes
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
