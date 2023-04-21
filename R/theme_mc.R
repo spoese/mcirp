@@ -17,13 +17,15 @@ theme_mc <- function() {
 #' `scale_fill_mc()` uses the main colors for the College as a fill option
 #' for a categorical data set.
 #'
+#' @param idx Integer vector of indices from the color palette to use.
 #' @examples
 #' ggplot(data = mtcars, aes(x = cyl, fill = factor(cyl))) + geom_histogram() + scale_fill_mc()
 #' @export
-scale_fill_mc <- function() {
-        scale_fill_manual(values = c("#51237f","9FA1A4","#666666","6E4D94",
-                                     "#FF5E3A","0E8AD9","28A689","#000000",
-                                     "#FFFFFF"))
+scale_fill_mc <- function(idx = 1:9) {
+        colors <- c("#51237f","9FA1A4","#666666","6E4D94",
+                    "#FF5E3A","0E8AD9","28A689","#000000",
+                    "#FFFFFF")
+        scale_fill_manual(values = colors[idx])
 }
 
 #' Use MC's colors for a color aesthetic
@@ -31,11 +33,13 @@ scale_fill_mc <- function() {
 #' `scale_color_mc()` uses the main colors for the College as a color option for
 #' a categorical data set.
 #'
+#' @param idx Integer vector of indices from the color palette to use.
 #' @examples
 #' ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) + geom_point() + scale_color_mc()
 #' @export
-scale_color_mc <- function() {
-        scale_color_manual(values = c("#51237f","9FA1A4","#666666","6E4D94",
-                                      "#FF5E3A","0E8AD9","28A689","#000000",
-                                      "#FFFFFF"))
+scale_color_mc <- function(idx = 1:9) {
+        colors <- c("#51237f","9FA1A4","#666666","6E4D94",
+                    "#FF5E3A","0E8AD9","28A689","#000000",
+                    "#FFFFFF")
+        scale_color_manual(values = colors[idx])
 }

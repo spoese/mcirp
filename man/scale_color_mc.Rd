@@ -4,7 +4,10 @@
 \alias{scale_color_mc}
 \title{Use MC's colors for a color aesthetic}
 \usage{
-scale_color_mc()
+scale_color_mc(idx = 1:9)
+}
+\arguments{
+\item{idx}{Integer vector of indices from the color palette to use.}
 }
 \description{
 \code{scale_color_mc()} uses the main colors for the College as a color option for

@@ -4,7 +4,10 @@
 \alias{scale_fill_mc}
 \title{Use MC's colors for a fill aesthetic}
 \usage{
-scale_fill_mc()
+scale_fill_mc(idx = 1:9)
+}
+\arguments{
+\item{idx}{Integer vector of indices from the color palette to use.}
 }
 \description{
 \code{scale_fill_mc()} uses the main colors for the College as a fill option
