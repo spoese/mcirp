@@ -14,5 +14,8 @@ scale_color_mc(idx = 1:9)
 a categorical data set.
 }
 \examples{
-ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) + geom_point() + scale_color_mc()
+library(ggplot2)
+ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+        geom_point() +
+        scale_color_mc()
 }

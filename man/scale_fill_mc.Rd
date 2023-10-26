@@ -14,5 +14,8 @@ scale_fill_mc(idx = 1:9)
 for a categorical data set.
 }
 \examples{
-ggplot(data = mtcars, aes(x = cyl, fill = factor(cyl))) + geom_histogram() + scale_fill_mc()
+library(ggplot2)
+ggplot(data = mtcars, aes(x = cyl, fill = factor(cyl))) +
+        geom_histogram() +
+        scale_fill_mc()
 }

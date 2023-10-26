@@ -34,6 +34,7 @@ whether a student who was enrolled in a certain semester was also enrolled in
 another semester of the user's choice.
 }
 \examples{
-df <- tibble(pidm = c(1:5, 1, 2, 5, 1, 4), term_code = c(rep(202120,5), rep(202220,3), rep(202320,2)))
+df <- dplyr::tibble(pidm = c(1:5, 1, 2, 5, 1, 4),
+        term_code = c(rep(202120,5), rep(202220,3), rep(202320,2)))
 retention(df, 202120, 202220)
 }

@@ -2,14 +2,24 @@
 #'
 #' `theme_mc()` uses a theme based on `theme_fivethirtyeight()` from the
 #' `ggthemes` package.
+#'
+#' @param legend If TRUE, adds a bottom-aligned legend to the plot.
 #' @examples
-#' ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) + geom_point() + theme_mc()
+#' library(ggplot2)
+#' ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+#'         geom_point() +
+#'         theme_mc()
 #'
 #' @export
-theme_mc <- function() {
-        theme_fivethirtyeight() +
-                theme(legend.position = "none",
-                      panel.grid.major.y = element_blank())
+theme_mc <- function(legend = TRUE) {
+        if (legend) {
+                ggthemes::theme_fivethirtyeight() +
+                        theme(panel.grid.major.y = element_blank())
+        } else {
+                ggthemes::theme_fivethirtyeight() +
+                        theme(legend.position = "none",
+                              panel.grid.major.y = element_blank())
+        }
 }
 
 #' Use MC's colors for a fill aesthetic
@@ -19,7 +29,10 @@ theme_mc <- function() {
 #'
 #' @param idx Integer vector of indices from the color palette to use.
 #' @examples
-#' ggplot(data = mtcars, aes(x = cyl, fill = factor(cyl))) + geom_histogram() + scale_fill_mc()
+#' library(ggplot2)
+#' ggplot(data = mtcars, aes(x = cyl, fill = factor(cyl))) +
+#'         geom_histogram() +
+#'         scale_fill_mc()
 #' @export
 scale_fill_mc <- function(idx = 1:9) {
         colors <- c("#51237f","9FA1A4","#666666","6E4D94",
@@ -35,7 +48,10 @@ scale_fill_mc <- function(idx = 1:9) {
 #'
 #' @param idx Integer vector of indices from the color palette to use.
 #' @examples
-#' ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) + geom_point() + scale_color_mc()
+#' library(ggplot2)
+#' ggplot(data = mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+#'         geom_point() +
+#'         scale_color_mc()
 #' @export
 scale_color_mc <- function(idx = 1:9) {
         colors <- c("#51237f","9FA1A4","#666666","6E4D94",

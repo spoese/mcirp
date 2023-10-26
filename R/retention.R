@@ -19,12 +19,13 @@
 #' new column of logicals added indicating whether the student was retained to
 #' `second_semester`.
 #' @examples
-#' df <- tibble(pidm = c(1:5, 1, 2, 5, 1, 4), term_code = c(rep(202120,5), rep(202220,3), rep(202320,2)))
+#' df <- dplyr::tibble(pidm = c(1:5, 1, 2, 5, 1, 4),
+#'         term_code = c(rep(202120,5), rep(202220,3), rep(202320,2)))
 #' retention(df, 202120, 202220)
 #' @export
 retention <- function(data, first_semester, next_semester, pidm_col = 1, term_code_col = 2) {
         first_students <- data[as.vector(data[,term_code_col] == first_semester),]
         second_students <- data[as.vector(data[,term_code_col] == next_semester),]
         first_students |>
-                mutate(Retained = pull(first_students,pidm_col) %in% pull(second_students,pidm_col))
+                dplyr::mutate(Retained = dplyr::pull(first_students,pidm_col) %in% dplyr::pull(second_students,pidm_col))
 }
