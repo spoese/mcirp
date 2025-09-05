@@ -1,6 +1,6 @@
 Package: mcirp
 Title: The Unofficial Package for the MC OIRE
-Version: 0.0.1
+Version: 1.0.2025
 Authors@R: 
     person("Scott", "Poese", , "scott.poese@montgomerycollege.edu", role = c("aut", "cre"))
 Description: A home for functions that are commonly used by the Montgomery
