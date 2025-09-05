@@ -35,8 +35,8 @@ theme_mc <- function(legend = TRUE) {
 #'         scale_fill_mc()
 #' @export
 scale_fill_mc <- function(idx = 1:9) {
-        colors <- c("#51237f","#9FA1A4","#666666","#6E4D94",
-                    "#FF5E3A","#0E8AD9","#28A689","#000000",
+        colors <- c("#51237f","#0095C8","#FBA93E","#51C9E7",
+                    "#F92329","#F15922","#00AC9B","#B82A91", "#000000",
                     "#FFFFFF")
         scale_fill_manual(values = colors[idx])
 }
@@ -54,8 +54,8 @@ scale_fill_mc <- function(idx = 1:9) {
 #'         scale_color_mc()
 #' @export
 scale_color_mc <- function(idx = 1:9) {
-        colors <- c("#51237f","#9FA1A4","#666666","#6E4D94",
-                    "#FF5E3A","#0E8AD9","#28A689","#000000",
+        colors <- c("#51237f","#0095C8","#FBA93E","#51C9E7",
+                    "#F92329","#F15922","#00AC9B","#B82A91", "#000000",
                     "#FFFFFF")
         scale_color_manual(values = colors[idx])
 }
